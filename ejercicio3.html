@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio3</title>
+</head>
+<body>
+    <div align="center">
+        <h1>Operaciones basicas</h1>
+    </div>
+</body>
+</html>
+<script>
+    function suma (a,b){
+        return a+b;
+    }
+    function resta (a,b){
+        return a-b;
+    }
+    function multiplicacion (a,b){
+        return a*b;
+    }
+    function division (a,b){
+        return a/b;
+    }
+    function cuadrado (a){
+        return a*a;
+    }
+    function mostrar(op, a, sig, b,resul){
+        document.write(op,a,sig,b,'<br>')
+        document.write('Resultado:',resul,'<br>')
+
+    }
+    
+    mostrar('suma:',2,'+',2,suma(2,2))
+    mostrar('resta:',2,'-',2,resta(2,2))
+    mostrar('multiplicacion:',2,'*',2,multiplicacion(2,2))
+    mostrar('division:',2,'/',2,division(2,2))
+    mostrar('cuadrado:',2,'*',2,cuadrado(2,2))
+
+    
+    
+
+</script>
