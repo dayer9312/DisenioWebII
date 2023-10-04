@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio7</title>
+</head>
+<body>
+    <div alingn="center">
+        <h1>Juego</h1>
+    </div>
+
+</body>
+</html>
+<script>
+    function preguntas (){
+        var numero= Math.round(Math.random()*3) 
+            let prefunta= prompt("Diga su pregunta")
+
+            if (numero==0){
+                alert("si")
+            }
+            else 
+            if (numero==1){
+                alert("no")
+            }
+            else
+            if (numero==2){
+                alert("talvez")
+            }
+            else
+            if (numero==3){
+                alert("ni  lo suenies")
+            }
+            preguntas()
+    }     
+    preguntas()       
+
+</script>

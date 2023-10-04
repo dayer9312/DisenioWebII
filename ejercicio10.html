@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio10</title>
+</head>
+<body>
+    <div alingn="center">
+        <h1>Lista ordenada</h1>
+    </div>
+</body>
+</html>
+<script>
+    function salto_linea(){
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+    }
+    function mostrar(mensaje){
+        document.write(mensaje);
+        salto_linea();
+    }
+    var palabras=[];
+    var cantidad=parseInt(prompt("Cantidad de palabras a ordenar"))
+    var cont=1;
+    while(cont<=cantidad){
+        var palabra_introducida=prompt("Palabra "+cont)
+        palabras.push(palabra_introducida)
+        cont++
+    } 
+    palabras.sort()
+    for(var i=0; i<cont;i++){
+        mostrar(palabras[i])
+    }
+</script>

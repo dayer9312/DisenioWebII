@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio6</title>
+</head>
+<body>
+    <div alingn="center">
+        <h1>Jeugo</h1>
+    </div>
+</body>
+</html>
+<script>
+    function salto_linea(){
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+    }
+    function mostrar(mensaje){
+        document.write(mensaje);
+        salto_linea();
+    }
+    var numero_adivinar= Math.round(Math.random()*10) 
+    var intento=3
+    var contador=1
+    while(contador<=intento){
+        var numero_ingresado= parseInt(prompt("ingrese un numero del 1 al 10 para adivinar"))
+        if(numero_ingresado==numero_adivinar){
+            alert("Adivinaste en el numero: "+contador+" el numero "+numero_adivinar+"") 
+        } 
+        else{
+            alert("no es numero")
+        }
+        contador++;
+    }
+
+</script>
