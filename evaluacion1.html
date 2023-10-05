@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluacion 1</title>
+</head>
+<body>
+    <div alingn="center">
+        <h1>Busqueda del tesoro</h1>
+    </div>
+</body>
+</html>
+<script>
+    function salto_linea(){
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+    }
+    function mostrar(mensaje){
+        document.write(mensaje);
+        salto_linea();
+    }
+    function mostrar_mapa(){
+        document.write("..   1 2 3 4 5")
+        for(var i=0;i<mapa.length;i++){
+            document.write("<br>")
+            document.write(i+1)
+            for(var j=0;j<mapa.length;j++){
+                document.writeln(" "+mapa[i][j])
+            }
+        }
+    }
+    document.write("Coloca la pocion del teseoro: [x][y] <br> X=columnas <br> Y=filas <br>")
+    var mapa = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]];
+    mostrar_mapa()
+
+    salto_linea()
+
+    var x= Math.round(Math.random()*4) 
+    var y= Math.round(Math.random()*4) 
+    mapa[y][x]=1
+    mostrar_mapa()
+    
+    setTimeout(function(){
+        for(var i=0; i<3;i++){
+            var posx=parseInt(prompt("posicion x:"))-1;
+            var posy=parseInt(prompt("posicion y:"))-1;
+            if(posx==x && posy==y){
+                alert("ganaste")
+                i=3;
+            }  
+            else{
+                if(posx==x){
+                    alert("posicion x correcta")
+                }
+                else
+                if(posy==y){
+                    alert("posicion y correcta")
+                }
+                else
+                alert("posicion incorrecta")
+            }   
+        }
+        mostrar_mapa
+    } ,5000);
+   
+  
+</script>
