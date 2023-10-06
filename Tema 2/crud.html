@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud</title>
+</head>
+<body>
+    <div alingn="center">
+        <h1>Crud</h1>
+    </div>
+</body>
+</html>
+<script>
+    var empleados=[];//array vacio de los registros de los empleados
+    //CRUD
+    //Crear
+    function agregarEmpleado (nombre,edad,cargo,salario){
+        var empleado={ //objeto empeado
+            nombre:nombre, //atributos
+            edad:edad,
+            cargo:cargo,
+            salario:salario
+        };
+        empleados.push(empleado);
+        console.log("empleado insertado")
+    }
+    //Leer
+    function mostrarEmpleado (){
+        if(empleados.length===0){
+            console.log("no existen registros de empleados")
+        }
+        else{
+            empleados.forEach(function(empleado,indice){  //funsion anonima
+                console.log("empleado # "+(indice+1));
+                console.log("nombre: "+empleado.nombre);
+                console.log("edad: "+empleado.edad);
+                console.log("cargo: "+empleado.cargo);
+                console.log("salario: "+empleado.salario);
+                console.log("<--------------------------->");
+            })
+        }
+    }
+    //Actualizar
+    function ActualizarEmpleado (indice,nombre,edad,cargo,salario){
+        if(empleados[indice]){
+            empleados[indice].nombre=nombre;
+            empleados[indice].edad=edad;
+            empleados[indice].cargo=cargo;
+            empleados[indice].salario=salario;
+            console.log("empleado actualizado")
+        }else{
+            console.log("el inidice proporcionado no tiene registro alguno -no hay tal atte: Ali")
+        }
+    }
+    //Eliminar
+    function EliminarEmpleado (indice){
+        if(empleados[indice]){
+            empleados.splice(indice,1);
+            console.log("Empleado eliminado")
+        }else{
+            console.log("el inidice proporcionado no tiene registro alguno -no hay tal atte: Ali")
+        }
+    }
+
+    //agregar empleados
+    agregarEmpleado("Gaby",18,"estudiante",0);
+    agregarEmpleado("Hernan",24,"ing",3500);
+    agregarEmpleado("Sayer",20,"estudiante",0);
+    agregarEmpleado("Chitto",24,"estudiante",1000);
+    //mostrar empleados
+    mostrarEmpleado();
+    //actualizar empleados
+    ActualizarEmpleado(0,"Gaby Ana",18,"estudiante",0)
+    //eliminar empleado
+    EliminarEmpleado(3);
+    //mostrar empleados
+    mostrarEmpleado();
+    
+</script>

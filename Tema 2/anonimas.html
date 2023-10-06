@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonimas</title>
+</head>
+<body>
+    <div alingn="center">
+        <h1>Funciones anonimas</h1>
+    </div>
+</body>
+</html>
+<script>
+    /*en java escrip, una funcion anonima es una funcion que jo tiene
+    un nombre asociado y se define directamente
+    en un lugar donde se necesita. Estas funciones se actulaizan 
+    comunmente como argumentos */
+
+    //definimos nuestra priera funcion anonima
+    var suma=function(a,b){
+        return a+b;
+    }
+    var resultado = suma(2,3)
+    console.log(resultado)
+
+    //arrow function
+    var suma2=(a,b)=> a+b;
+    resultado2=suma2(2,4);
+    console.log(resultado2)
+
+    //operador ternario con arrow function   "?""
+    const parImpar = (n)=>(n%2===0 ? "par":"impar")
+    console.log(parImpar(9))
+
+    const factorial=(numero)=> {
+        if(numero===0){
+            return 1;
+        }else{
+            return numero*factorial(numero-1)
+        }
+    }
+    console.log(factorial(5))
+
+</script>
